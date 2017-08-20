@@ -1,0 +1,23 @@
+.container{
+  background-color: #fff;
+  margin:8rpx 0 16rpx 0;
+  padding: 10rpx 20rpx;
+}
+.form-group{
+  border-bottom:1px solid #DFDFDD;
+}
+
+.count-down-btn{
+  background-color: #B3B3B3;
+  height: 52rpx;
+  line-height:52rpx;
+  text-align: center;
+  padding:0 20rpx;
+  border-radius: 6rpx;
+  color: #fff;
+  width: 200rpx;
+}
+
+button{
+  margin-top: 20rpx;
+}

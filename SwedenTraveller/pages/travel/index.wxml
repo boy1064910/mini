@@ -1,0 +1,43 @@
+<view class="container" style="display:{{emptyInfoDisplay}}">
+  <view class="empty_info">您尚未被分配到行程队伍中，如有问题，请联系客服</view>
+  <button class="contact_btn" type="primary" open-type="contact">联系客服</button>
+</view>
+<view class="container" style="display:{{travelInfoDisplay}}">
+  <view style="height:{{surfaceHeight}}px;" class="travel_surface">
+    <image class="surface" src="{{travel.surface}}" style="height:{{surfaceHeight}}px;"></image>
+    <image src="/images/travel/all-albums.png" class="surface-all-albums" bindtap="toAlbums"></image>
+  </view>
+  <view class="travel_title">{{travel.name}}</view>
+  <block wx:for="{{travel.dateList}}" wx:for-index="idx" wx:for-item="date" wx:key="id">
+  <view class="travel_info" bindtap="toAlbumDetail" data-travel-date-id="{{date.id}}" data-photo-album-name="{{date.photoAlbumName}}">
+    <view class="travel_info_pic">
+      <image class="travel_info_pic_img" src="/images/travel/title-coin.png"></image>
+      <i class="img_new_tip" style="display:{{date.newDisPlay}}"></i>
+    </view>
+    <view class="travel_date_info" style="color:{{date.colorCss}}">
+      <text>DAY-{{idx+1}}</text>
+      <text>{{date.travelDate}}</text>
+    </view>
+  </view>
+  <view class="travel_date_detail_list">
+    <block wx:for="{{date.detailList}}" wx:for-index="detailIndex" wx:for-item="detail">
+      <view class="travel_date_detail_info ">
+        <view class="time_point" style="width:{{timePointWidth}}px;color:{{detail.colorCss}}">{{detail.timePoint}}</view>
+        <view class="time_point_dot" style="width:{{timeDotWidth}}px;color:{{detail.colorCss}}">
+          <text class="v_dot">·</text>
+          <view class="v_line" wx:if="{{detailIndex!=date.detailList.length-1}}" style="top:{{detail.dotTop}}px;height:{{detail.timeEventLineHeight}}px"></view>
+        </view>
+        <view style="width:{{timeEventWidth}}px;color:{{detail.colorCss}};height:{{detail.timeEventHeight}}px" class="time_event">
+          <text>{{detail.timeEvent}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="company_info" wx:if="{{date.companyModelList!=null}}">
+    <view class="company_icon"><image src="/images/travel/company-icon.png"></image></view>
+    <block wx:for="{{date.companyModelList}}" wx:for-index="companyIndex" wx:for-item="company" >
+    <view class="company_text" bindtap="toCompany" data-company-id="{{company.companyId}}">{{company.companyName}}</view>
+    </block>
+  </view>
+  </block>
+</view>

@@ -1,0 +1,13 @@
+<view class="company_logo">
+  <image src="{{company.logo}}" mode="aspectFit"></image>
+</view>
+<view class="company_en">{{company.ename}}</view>
+<view class="company_zh" wx:if="{{company.name!=null}}">{{company.name}}</view>
+<view class="company_info">
+  <block wx:for="{{company.detailList}}" wx:for-index="idx" wx:for-item="detail" wx:key="id">
+  <view class="company_detail_info" wx:if="{{detail.type==1}}">
+    <text>{{detail.info}}</text>
+  </view>
+  <image wx:if="{{detail.type==2}}" class="company_detail_img" src="{{detail.imgUrl}}" style="height:{{imageHeightArray[idx]}}px" bindload="caculateImageHeight" data-index="{{idx}}"></image>
+  </block>
+</view>

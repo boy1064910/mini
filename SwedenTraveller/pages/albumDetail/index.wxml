@@ -1,0 +1,7 @@
+<view class="album_title">{{albumName}}</view>
+<block wx:for="{{picList}}" wx:for-index="idx" wx:for-item="pic" wx:key="id">
+<view wx:if="{{idx%3==1}}" class="pic_view_separator" style="height:{{picWidth}}px;"></view>
+<view wx:if="{{idx!=0&&idx%3==2}}" class="pic_view_separator" style="height:{{picWidth}}px;"></view>
+<view class="pic_view" style="width:{{picWidth}}px;height:{{picWidth}}px;background-image:url('{{pic.picUrl}}')" data-pic-url="{{pic.picUrl}}" bindtap="previewPic">
+</view>
+</block>

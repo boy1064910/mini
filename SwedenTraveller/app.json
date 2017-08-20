@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/travel/index",
+    "pages/login/index",
+    "pages/register/index",
+    "pages/logs/logs",
+    "pages/album/index",
+    "pages/albumDetail/index",
+    "pages/company/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3a4fb1",
+    "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,28 @@
+.company_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.company_logo>image{
+  width:160rpx;
+  height: 160rpx;
+}
+.company_en{
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.company_zh{
+  text-align: center;
+  margin-top: 10rpx;
+  color: #999;
+}
+.company_detail_info{
+  word-break: break-all;
+  padding: 20rpx;
+}
+.company_detail_img{
+  width: 100%;
+}

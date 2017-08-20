@@ -1,0 +1,20 @@
+.album_title{
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+}
+.pic_view{
+  float: left;
+  background-size: cover;
+  background-position: center;
+  margin: 6px 0 0 0;
+}
+.pic_view_clear{
+  clear: both;
+  display: block;
+  content: " ";
+}
+.pic_view_separator{
+  width: 6px;
+  float: left;
+}

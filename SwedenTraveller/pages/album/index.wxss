@@ -1,0 +1,29 @@
+.album{
+  width: 50%;
+  float: left;
+}
+.album_inner{
+  margin: 8px 8px 0 8px;
+}
+.album_inner>image{
+  width: 100%;
+  border-radius: 8rpx;
+}
+.album_info::after{
+  clear: both;
+  content: " ";
+  display: block;
+}
+.album_title{
+  float: left;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+.album_new_tip{
+  float: right;
+  height: 36rpx;
+  width: 64rpx;
+}
+.album_photo_count{
+  color: #7c7c7c;
+}

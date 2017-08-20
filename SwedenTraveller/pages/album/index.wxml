@@ -1,0 +1,14 @@
+<view class="album_container">
+<block wx:for="{{travelAlbumList}}" wx:for-index="idx" wx:for-item="album" wx:key="id">
+<view class="album" bindtap="toAlbumDetail" data-id="{{album.id}}" data-album-name="{{album.photoAlbumName}}">
+  <view class="album_inner">
+  <image src="{{album.albumPicUrl}}" style="width:{{albumWidth}}px;height:{{albumWidth}}px" mode="aspectFit"></image>
+  <view class="album_info">
+    <view class="album_title">{{album.photoAlbumName}}</view>
+    <image class="album_new_tip" style="display:{{album.newPhotoDisplay}};" src="/images/travel/album_new.png"></image>
+  </view>
+  <view class="album_photo_count">{{album.photoCounts}}张</view>
+  </view>
+</view>
+</block>
+</view>

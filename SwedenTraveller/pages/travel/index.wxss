@@ -1,0 +1,139 @@
+.container{
+  background-color: #fff;
+}
+.empty_info{
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: 100rpx;
+}
+.contact_btn{
+  width: 200rpx;
+  margin-top: 40rpx;
+}
+.travel_surface{
+  overflow: hidden;
+  position: relative;
+}
+.surface{
+  width: 100%;
+}
+.surface-all-albums{
+  width:160rpx;
+  height:40rpx;
+  position: absolute;
+  z-index: 1;
+  right: 20rpx;
+  bottom: 20rpx;
+  background-color: #515363;
+  border-radius: 20rpx;
+}
+.travel_title{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  padding:0 20rpx;
+  overflow: hidden;
+}
+.travel_info{
+  display: flex;
+  flex-direction:row; 
+  background-image: url('http://sweden.materia.mobi/images/travel/title-bg.png');
+  margin: 16rpx 0;
+}
+.travel_info_pic{
+  height: 100rpx;
+  position: relative;
+}
+.travel_info_pic_img{
+  margin: 0 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.img_new_tip{
+  display:block;
+  background:#f00;
+  border-radius:50%;
+  width:20rpx;
+  height:20rpx;
+  top:4rpx;
+  left:20rpx;
+  position:absolute;
+}
+.travel_date_info{
+  display: flex;
+  flex-direction:column; 
+  align-items: flex-start;
+  justify-content: center;
+}
+.travel_date_info>text:first-child{
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.travel_date_info>text:last-child{
+  font-size: 24rpx;
+}
+.travel_date_detail_info{
+  display: flex;
+  flex-direction:row; 
+  /*align-items: center;*/
+  margin-bottom: 8px;
+}
+.travel_date_detail_info .time_point{
+  font-size: 24rpx;
+  font-weight: bold;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.travel_date_detail_info .time_point_dot{
+  font-weight: bolder;
+  font-size: 25px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.company_info{
+  display: flex;
+  height: 60rpx;
+  flex-direction:row; 
+  align-items: center;
+}
+.company_icon{
+  margin-left: 40rpx;
+}
+.company_icon>image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.company_text{
+  margin-left: 20rpx;
+  font-size: 20rpx;
+  background-color: #3a4fb1;
+  color: #fff;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.v_dot{
+  position: relative;
+  z-index: 1;
+}
+.travel_date_detail_info .time_event{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  line-height: 16px;
+  font-size: 12px;
+}
+.v_line{
+  position: absolute;
+  left: center;
+  border-left: 2px solid #d5d5d5;
+  z-index: 0;
+  height: 40px;
+}

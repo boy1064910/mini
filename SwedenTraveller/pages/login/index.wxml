@@ -1,0 +1,29 @@
+<view style="display:{{successDisplay}}">
+  <view class="tip-div">
+    <image src="/images/common/tip-success.png"></image>
+    <text>登录成功，页面将会自动跳转</text>
+    <text>如未跳转，请点击下面跳转按钮</text>
+    <button bindtap="toBack">手动跳转</button>
+  </view>
+</view>
+
+<view style="display:{{failDisplay}}">
+  <view class="tip-div">
+    <image src="/images/common/tip-error.png"></image>
+    <text>获取用户信息授权失败，请进入设置页面开启信息授权</text>
+    <button bindtap="toSettings">进入设置</button>
+  </view>
+</view>
+
+<view style="display:{{errorDisplay}}">
+  <view class="tip-div">
+    <image src="/images/common/tip-error.png"></image>
+    <text>{{errorInfo}}</text>
+  </view>
+  <view class="contact-service-div">
+    <text>给您带来了不便，我们深表歉意。</text>
+    <text> 如需帮助，请联系客服或者拨打我们的客服热线，谢谢！</text>
+    <button open-type="contact">联系客服</button>
+    <button bindtap="callService">拨打客服电话</button>
+  </view>
+</view>
