@@ -1,0 +1,21 @@
+<view>
+  <block wx:for="{{knowledgeList}}" wx:for-item="knowledge">
+    <view class="knowledge_info" data-knowledge-id="{{knowledge.id}}" bindtap="toVideo">
+      <view class="knowledge_info_f">
+        
+      </view>
+      <view class="knowledge_info_s">
+        <view class="knowledge_info_s_f">
+          {{knowledge.name}}
+        </view>
+        <view class="knowledge_info_s_s">
+          <view>{{knowledge.exampleCount}}道习题</view>
+          <view>视频时长：{{course.videoSeconds}}秒</view>
+        </view>
+      </view>
+      <view class="knowledge_info_t">
+        
+      </view>
+    </view>
+  </block>
+</view>

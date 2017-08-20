@@ -1,0 +1,32 @@
+.course_info{
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  margin: 8rpx;
+  padding: 10rpx;
+}
+.course_info_f{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.course_info_f>text:first-child{
+  float: left;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.course_info_f>text:last-child{
+  float: right;
+  color: #999999;
+}
+.course_info_s{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.course_info_s>text{
+  margin-left: 20rpx;
+  color: #999999;
+  width: 25%;
+}
+.course_info_s>text:first-child{
+  margin-left: 0rpx;
+}

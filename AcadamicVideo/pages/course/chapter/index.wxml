@@ -1,0 +1,22 @@
+<view>
+  <block wx:for="{{chapterList}}" wx:for-item="chapter">
+    <view class="chapter_info" bindtap="toKnowledge" data-chapter-code="{{chapter.code}}">
+      <view class="chapter_info_f">
+        {{chapter.sequence}} {{chapter.name}}
+      </view>
+      <view class="chapter_info_s">
+        <view class="chapter_info_s_f">
+          <view class="chapter_info_s_f_f">
+            <text>{{chapter.knowledgeCount}}个知识点</text>
+            <text>{{chapter.buyCount}}次购买</text>
+          </view>
+          <view class="chapter_info_s_f_f">
+            <text>{{chapter.exampleCount}}道习题</text>
+            <text>视频时长：{{course.videoSeconds}}秒</text>
+          </view>
+        </view>
+        <view class="chapter_info_s_s">￥<text class="money">{{chapter.price}}</text></view>
+      </view>
+    </view>
+  </block>
+</view>

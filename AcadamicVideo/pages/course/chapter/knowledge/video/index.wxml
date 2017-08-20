@@ -1,0 +1,23 @@
+<view>
+  <video class="knowledge_video" id="knowledgeVideo" src="{{knowledge.videoUrl}}"></video>
+</view>
+<view class="">
+  <block wx:for="{{diffLevelList}}" wx:for-item="diffLevel" wx:for-index="dIndex">
+    <view class="diff_level" style="display:{{diffLevel.displayState}};">
+      <view>{{diffLevel.sequence}}</view>
+      <block wx:for="{{diffLevel.exerciseList}}" wx:for-item="exercise" wx:for-index="eIndex">
+        <view>
+          <image src="{{exercise.picUrl}}" bindload="exerciseLoadEvent" data-d-index="{{dIndex}}" data-e-index="{{eIndex}}" style="width:100%;height:{{exercise.imgHeight}}rpx;"></image>
+        </view>
+        <view>请输入答案</view>
+        <block wx:for="{{exercise.answers}}" wx:for-item="answer" wx:for-index="aIndex">
+          <input placeholder="答案{{aIndex}}" />
+        </block>
+        <view class="exercise_seperate"></view>
+      </block>
+    </view>
+  </block>
+  <view class="classname">
+    <button type="primary" bindtap="answerTap">提交答案</button>
+  </view>
+</view>

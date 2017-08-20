@@ -1,0 +1,16 @@
+<view>
+  <block wx:for="{{courseList}}" wx:for-item="course" wx:key="id">
+    <view class="course_info" bindtap="toChapter" data-code="{{course.code}}">
+      <view class="course_info_f">
+        <text>{{course.name}}</text>
+        <text>视频时长：{{course.videoSeconds}}秒</text>
+      </view>
+      <view class="course_info_s">
+        <text>{{course.chapterCount}}章节</text>
+        <text>{{course.knowledgeCount}}个知识点</text>
+        <text>{{course.exampleCount}}道习题</text>
+        <text>{{course.buyCount}}次购买</text>
+      </view>
+    </view>
+  </block>
+</view>

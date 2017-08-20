@@ -1,0 +1,46 @@
+.chapter_info{
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  margin: 8rpx;
+  padding: 10rpx;
+}
+.chapter_info_f{
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px dashed #eee;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.chapter_info_s{
+  display: flex;
+  flex-direction: row;
+}
+.chapter_info_s_f{
+  width: 70%;
+}
+.chapter_info_s_s{
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: red;
+}
+.chapter_info_s_s .money{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.chapter_info_s_f_f{
+  height: 48rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.chapter_info_s_f_f>text{
+  margin-left: 20rpx;
+  color: #999999;
+  width: 40%;
+}
+.chapter_info_s_f_f>text:first-child{
+  margin-left: 0rpx;
+}
