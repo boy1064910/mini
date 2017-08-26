@@ -1,0 +1,83 @@
+<view class="container">
+  <view class="tab">
+    <view bindtap="chooseView" data-type="student">学生</view>
+    <view bindtap="chooseView" data-type="guardian">监护人</view>
+    <view bindtap="chooseView" data-type="teacher">老师</view>
+  </view>
+  <view>
+    <form bindsubmit="studentFormSubmit">
+    <view class="{{tabView.student_cls}}">
+      <view class="form-group-row">
+        <input name="name" placeholder="请输入姓名" placeholder-class="input-placeholder" maxlength="10" />
+      </view>
+      <view class="form-group-row">
+        <picker mode="selector" range="{{sexArray}}" range-key="value" bindchange="sexChangedEvent">
+          <view class="picker">
+            {{sexArray[sexIndex].value}}
+          </view>
+        </picker>
+      </view>
+      <view class="form-group-row">
+        <input name="school" placeholder="请输入在读学校" placeholder-class="input-placeholder" maxlength="30" />
+      </view>
+      <view class="form-group-row">
+        <input name="gradeClass" placeholder="请输入所在年级班级，如三年二班" placeholder-class="input-placeholder" maxlength="20" />
+      </view>
+      <view class="form-group-row">
+        <button form-type="submit"> 提交认证 </button>
+      </view>
+    </view>
+    </form>
+    <view class="{{tabView.guardian_cls}}">
+      监护人
+    </view>
+    <form bindsubmit="teacherFormSubmit">
+      <view class="tab-view {{tabView.teacher_cls}}">
+        <view class="form-group-row">
+          <input name="name" placeholder="请输入姓名" placeholder-class="input-placeholder" maxlength="10" />
+        </view>
+        <view class="form-group-row">
+          <input name="idNumber" placeholder="请输入身份证号" placeholder-class="input-placeholder" maxlength="20"  />
+        </view>
+        <view class="form-group-row">
+          <input name="graduateSchool" placeholder="请输入毕业院校" placeholder-class="input-placeholder" maxlength="20" />
+        </view>
+        <view class="form-group-row">
+          <picker range="{{eduArray}}" bindchange="eduChangedEvent">
+            <view class="picker">
+              {{eduSelectedValue}}
+            </view>
+          </picker>
+        </view>
+        <view class="form-group-row">
+          <input name="degree" placeholder="请输入获得学位" placeholder-class="input-placeholder" maxlength="20" />
+        </view>
+        <view class="form-group-row">
+          <textarea name="experience" placeholder="请输入教师简介" placeholder-class="textarea-placeholder" maxlength="200" />
+        </view>
+        <view class="form-group-row">
+          <textarea name="characteristic" placeholder="请输入教学特点" placeholder-class="textarea-placeholder" maxlength="200" />
+        </view>
+        <view class="form-group-row">
+          <button form-type="submit"> 提交认证 </button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>
+
+<view>
+<text>信息一经填写则无法更改，填写准确信息能享受学术葩的信息服务。</text>
+<text>学生身份信息认证，享受上课</text>
+</view>
+<view>
+<text>监护人身份信息认证，享受
+  1.学生签到服务通知；
+  2.课程变动服务通知；
+  3.优惠政策服务通知；
+  4.学生成绩服务通知；
+</text>
+</view>
+<view>
+<text>请耐心等待工作人员核对教师身份信息，认证成功之后，教师的教学信息将会展现在平台的教师信息页上，请如实填写。系统告诉管理后台登录方式和账号密码，享受排课时间确认、课程报名情况等通知</text>
+</view>

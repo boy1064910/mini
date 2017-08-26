@@ -1,0 +1,28 @@
+<image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" style="width:100%;height:{{picHeight}}"></image>
+<view class="teacher-info">
+  <view class="teacher-info-f">
+    <image class="teacher-head" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+    <view class="teacher-name">
+      <text>陈元凯</text>
+      <text>（昵称：大凯老师）</text>
+    </view>
+  </view>
+  <view class="teacher-info-s">
+    <view class="teacher-info-data">
+      <text>10</text>
+      <text>课程</text>
+    </view>
+    <view class="teacher-info-data">
+      <text>10</text>
+      <text>学生</text>
+    </view>
+    <view class="teacher-info-data">
+      <text>10</text>
+      <text>点赞</text>
+    </view>
+    <view class="teacher-info-data">
+      <text>10</text>
+      <text>评分</text>
+    </view>
+  </view>
+</view>

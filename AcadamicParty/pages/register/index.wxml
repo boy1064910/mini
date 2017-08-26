@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="form-group">
+    <image class="input-ico" src="/images/register/phone.png"></image>
+    <input class="form-input" type="number" id="account" data-name="account" placeholder="请输入手机号码" placeholder-class="form-input-placeholder" maxlength="11" focus="true" bindchange="changedEvent" />
+    <view class="count-down-btn" bindtap="getMsgCode">{{codeBtnHtmler}}</view>
+  </view>
+  <view class="form-group">
+    <image class="input-ico" src="/images/register/pwd.png"></image>
+    <input class="form-input" type="number" id="code" placeholder="请输入短信验证码" placeholder-class="input-placeholder" maxlength="6" bindchange="changedEvent" />
+  </view>
+</view>
+<view class="id-choose-title">身份选择（一经保存暂时无法修改身份信息）</view>
+<view class="container">
+  <view class="tab">
+    <view bindtap="chooseView" data-type="student">学生</view>
+    <view bindtap="chooseView" data-type="guardian">监护人</view>
+    <view bindtap="chooseView" data-type="teacher">老师</view>
+  </view>
+</view>
+<button class="form-button" formType="submit">绑定手机号</button>

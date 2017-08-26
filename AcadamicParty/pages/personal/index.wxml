@@ -1,0 +1,22 @@
+<view class="container user-info">
+  <image src="{{head}}"></image>
+  <view class="user-info-text">
+    <view class="user-info-nickname">
+      {{nickName}}
+    </view>
+    <view class="user-info-account">账号：{{account}}</view>
+  </view>
+</view>
+
+<view class="container rows-info-first" bindtap="toIdentity">
+  <view class="rows-info-detail">
+    信息认证
+    <text class="identity-info {{identityStyle}}">({{identityType}})</text>
+  </view>
+</view>
+<view class="container">
+  <view class="rows-info-detail rows-info-detail-no-border">我的钱包</view>
+</view>
+<view class="container rows-info-first" bindtap="toHtml">
+  <view class="rows-info-detail rows-info-detail-no-border">设置</view>
+</view>

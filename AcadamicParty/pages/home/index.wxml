@@ -1,0 +1,54 @@
+<swiper indicator-dots="true" indicator-color="" indicator-active-color="#ffffff" style="height:{{swiperHeight}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" style="width:100%;height:{{swiperHeight}}" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="panel-teacher">
+  <view class="title">优秀教师</view>
+  <scroll-view class="panel-scroll-teacher" scroll-x="true">
+    <block wx:for="{{teacherList}}">
+    <view class="lump-teacher" bindtap="openTeacher" data-teacherid="{{item.id}}">
+      <image src="{{item.head}}" />
+      <view class="lump-teacher-info">
+        {{item.name}}
+      </view>
+    </view>
+    </block>
+  </scroll-view>
+</view>
+
+<view class="panel-course-list">
+  <block wx:for="{{courseList}}">
+  <view class="panel-course" bindtap="openCourseDetail" data-courseid="{{item.id}}">
+    <view class="course-info">
+      <image src="{{item.titlePageUrl}}"></image>
+      <view>
+        <view class="course-name">
+          {{item.name}}
+        </view>
+        <view class="course-bottom">
+          <view class="coourse-teacher">
+            <view>{{item.teacherName}} | 从教{{item.schoolAge}}年</view>
+            <view>{{item.rateName}}</view>
+          </view>
+          <view class="course-price">￥<text>{{item.price}}</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="panel-course-other">
+      <view>
+        <image class="panel-course-other-image-location" src="/images/common/location.png"></image>
+        <text>{{item.city}}{{item.area}}</text>
+      </view>
+      <view>
+        <image class="panel-course-other-image-times" src="/images/common/times.png"></image>
+        <text>{{item.startDate}} ~ {{item.endDate}}</text>
+      </view>
+    </view>
+  </view>
+  </block>
+</view>

@@ -1,0 +1,72 @@
+<view class="page-content">
+  <image src="{{courseModel.titlePageUrl}}" style="width:100%;height:{{picHeight}}"></image>
+  <view class="course-info">
+    <view class="course-name-detail">
+      <view class="course-name">{{courseModel.name}}</view>
+      <view class="course-count">
+        <view>报名人数：<text>{{courseModel.enrollCount}}</text></view>
+        <view>开班人数：{{courseModel.minCount}}~{{courseModel.maxCount}}</view>
+      </view>
+    </view>
+    <view class="course-info-other">
+      <text>{{courseModel.city}}{{courseModel.area}}</text>
+      <text>2017.05.01~2017.05.09</text>
+    </view>
+  </view>
+
+  <view class="teacher-info">
+    <view class="teacher-info-pic">
+      <image src="{{courseModel.head}}"></image>
+      <text>{{courseModel.teacherName}}</text>
+    </view>
+    <view class="teacher-info-detail" style="width:{{teacherDetailWidth}}">
+      <view>毕业院校：{{courseModel.graduateSchool}}</view>
+      <view>学历：{{courseModel.eduBackGround}}</view>
+      <view>评级：{{courseModel.rateName}}</view>
+    </view>
+    <view class="teacher-info-detail" style="width:{{teacherDetailWidth}}">
+      <view>学位：{{courseModel.degree}}</view>
+      <view>教龄：{{courseModel.schoolAge}}年</view>
+    </view>
+  </view>
+
+  <view class="course-intro">
+    <view class="course-intro-title">【课程介绍】</view>
+    <view class="course-intro-info">
+      {{courseModel.info}}
+    </view>
+  </view>
+
+  <view class="course-detail-outline">
+    <view class="course-intro-title">【课程大纲】</view>
+    <view class="course-detail-list" style="height:{{courseDetailHeight}}">
+      <block wx:for="{{courseModel.detailList}}">
+      <view class="course-detail">
+        <view class="course-detail-l">
+          <view>{{index+1}}.{{item.info}}</view>
+          <view>{{item.startTime}}~{{item.endTime}}</view>
+          <view>{{item.address}}{{item.roomInfo}}{{item.classRoomName}}</view>
+        </view>
+        <view class="course-detail-r">未开始</view>
+      </view>
+      </block>
+    </view>
+    <view style="height:60rpx;line-height:60rpx;text-align:center;" bindtap="toggleCourseDetail">
+      <image src="/images/common/{{moreDetailImg}}" class="more-detail-btn"></image>
+    </view>
+  </view>
+</view>
+<view class="shopping-line">
+  <view class="shopping-line-l" bindtap="toSettle">
+    <view class="shopping-line-l-img">
+      <image src="/images/tabBar/shopping_car_selected.png"></image>
+      <text class="shopping-line-l-count" style="display:{{shoppingCountDisplay}}">{{courseModel.shoppingCarLength}}</text>
+    </view>
+  </view>
+  <view class="shopping-line-r-btn" bindtap="addShoppingList" data-course-id="{{courseModel.id}}" style="background-color:{{addCourseBackColor}}">
+    {{addCourseBtnText}}
+  </view>
+  <view class="shopping-line-r-price">
+    ￥<text>{{courseModel.price}}</text>
+  </view>
+</view>

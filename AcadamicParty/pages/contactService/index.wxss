@@ -1,0 +1,38 @@
+.tip-div{
+  display: flex;
+  margin-top: 120rpx;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tip-div>image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-bottom: 30rpx;
+}
+.tip-div>text{
+  padding: 0rpx 20rpx;
+}
+
+
+.contact-service-div{
+  position: absolute;
+  bottom: 40rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.contact-service-div>text{
+  padding: 0rpx 20rpx;
+}
+
+
+button{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  margin-top: 16rpx;
+}

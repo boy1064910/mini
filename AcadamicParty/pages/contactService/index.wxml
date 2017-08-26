@@ -1,0 +1,12 @@
+<view>
+  <view class="tip-div">
+    <image src="/images/common/tip-error.png"></image>
+    <text>{{errMsg}}</text>
+  </view>
+  <view class="contact-service-div">
+    <text>给您带来了不便，我们深表歉意。</text>
+    <text> 如需帮助，请联系客服或者拨打我们的客服热线，谢谢！</text>
+    <button open-type="contact">联系客服</button>
+    <button bindtap="callService">拨打客服电话</button>
+  </view>
+</view>

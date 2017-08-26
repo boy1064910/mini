@@ -1,0 +1,58 @@
+.user-info{
+  height: 144rpx;
+  margin-top:20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.user-info-text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 16rpx;
+}
+.user-info-nickname{
+  font-size: 32rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+.user-info-account{
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.user-info image{
+  width: 114rpx;
+  height: 114rpx;
+  border-radius: 6rpx;
+  margin-left: 22rpx;
+}
+
+
+.rows-info-first{
+  margin-top: 20rpx;
+}
+.rows-info-detail{
+  margin: 0 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  border-bottom: 1px solid #DFDFDD;
+}
+.rows-info-detail-no-border{
+  border:none;
+}
+
+.identity-info{
+  font-size: 24rpx;
+}
+.identity-no{
+  color: red;
+}
+.identity-yes{
+  color: green;
+}
+.identity-waiting{
+  color: grey;
+}

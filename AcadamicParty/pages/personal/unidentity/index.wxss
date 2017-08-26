@@ -1,0 +1,33 @@
+.container{
+  padding-top: 20rpx;
+}
+.tab{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #000;
+  border-radius: 8rpx;
+}
+.tab>view{
+  width: 33%;
+  text-align: center;
+  font-size: 28rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  border-right: 1px solid #000;
+}
+.tab>view:last-child{
+  border-right: none;
+}
+
+.tab-view{
+  padding: 20rpx 0;
+}
+.tab-view-show{
+  display: block;
+}
+.tab-view-hide{
+  display: none;
+}
+
