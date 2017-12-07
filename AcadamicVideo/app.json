@@ -9,7 +9,8 @@
     "pages/shopping/index",
     "pages/personal/index",
     "pages/login/index",
-    "pages/register/index"
+    "pages/register/index",
+    "pages/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,30 +18,6 @@
     "navigationBarTitleText": "学术葩",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#efeff4"
-  },
-  "tabBar": {
-    "backgroundColor": "#fff",
-    "borderStyle": "black",
-    "selectedColor": "#0B9EDE",
-    "color": "#757575",
-    "list": [
-      {
-        "pagePath": "pages/course/index",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/self-course/index",
-        "text": "学习列表"
-      },
-      {
-        "pagePath": "pages/shopping/index",
-        "text": "快来付款"
-      },
-      {
-        "pagePath": "pages/personal/index",
-        "text": "我"
-      }
-    ]
   },
   "debug": true
 }
