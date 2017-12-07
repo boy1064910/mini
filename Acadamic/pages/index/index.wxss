@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20rpx;
 }
 
 .userinfo-avatar {
@@ -18,4 +19,26 @@
 
 .usermotto {
   margin-top: 200px;
+}
+
+.course-info{
+	width: 100%;
+	margin-top: 30rpx;
+}
+.course-info>view{
+	padding: 16rpx 0rpx 8rpx 0rpx;
+	margin: 0 20rpx;
+}
+.course-buyed-title{
+	text-align: left;
+	font-size: 32rpx;
+	color: #aaa;
+	border-bottom: 1px dashed #ccc;	
+}
+.course-info-list{
+	text-align: center;
+}
+
+.btn-info{
+	margin-top: 30rpx;
 }

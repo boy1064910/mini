@@ -1,14 +1,14 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#36363A",
-    "navigationBarTitleText": "学术葩",
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#efeff4"
-  },
-  "debug":true
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#36363A",
+        "navigationBarTitleText": "学术葩",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#efeff4"
+    },
+    "debug": true
 }

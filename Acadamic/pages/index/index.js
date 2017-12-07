@@ -13,11 +13,11 @@ Page({
   },
   onLoad: function () {
     //获取用户信息
-    wx.request({
+    app.request({
         'url': common.accountService + "/account/info.shtml",
-        'successCallback':function(result){
+        'success':res=>{
             this.setData({
-                userInfo: result.data
+				userInfo: res.data
             });
             //TODO 获取用户已购买的课程信息
         }
