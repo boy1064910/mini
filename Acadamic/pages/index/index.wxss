@@ -26,17 +26,24 @@
 	margin-top: 30rpx;
 }
 .course-info>view{
-	padding: 16rpx 0rpx 8rpx 0rpx;
+	padding: 20rpx 0rpx 8rpx 0rpx;
 	margin: 0 20rpx;
 }
 .course-buyed-title{
 	text-align: left;
 	font-size: 32rpx;
-	color: #aaa;
+	color: #36363A;
 	border-bottom: 1px dashed #ccc;	
 }
 .course-info-list{
 	text-align: center;
+}
+.course-info-list>view{
+	display: none;
+	font-size: 30rpx;
+}
+.course-info-list .none-course-tips{
+	color: #ccc;
 }
 
 .btn-info{

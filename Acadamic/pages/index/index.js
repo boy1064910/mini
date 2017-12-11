@@ -3,7 +3,10 @@ const app = getApp()
 
 Page({
   data: {
-    userInfo: {}
+    userInfo: {},
+	containerDisplay:'none',
+	courseDisplay:'none',
+	noneCourseDisplay:'block'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -17,7 +20,8 @@ Page({
         'url': common.accountService + "/account/info.shtml",
         'success':res=>{
             this.setData({
-				userInfo: res.data
+				userInfo: res.data,
+				containerDisplay:true
             });
             //TODO 获取用户已购买的课程信息
         }
