@@ -50,5 +50,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  //跳转课程购买页面
+  toCourse:function(e){
+      wx.navigateTo({
+          url: '../course/index?id=' + e.currentTarget.id
+      })
   }
 })
