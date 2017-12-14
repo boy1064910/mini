@@ -20,7 +20,7 @@
 		<view class="course-info-list">
 			<!-- 平台课程列表 -->
 			<view style="display:{{courseDisplay}}">
-				<view wx:key="id" wx:for="{{courseList}}" wx:for-index="idx" wx:for-item="course" bindtap="toCourse" id="{{course.id}}">
+				<view wx:key="id" wx:for="{{unBuyCourseList}}" wx:for-index="idx" wx:for-item="course" bindtap="toCourse" id="{{course.id}}">
 					{{idx}}: {{course.name}}
 				</view>
 			</view>

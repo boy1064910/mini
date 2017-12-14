@@ -34,8 +34,10 @@ Page({
 					console.log(this);
 					console.log(res);
 					var data = res.data;
+					console.log(data);
 					this.setData({
-						'courseList':data.courseList,
+						'unBuyCourseList': data.unBuyCourseList,
+						'buyedCourseList': data.buyedCourseList,
 						'courseDisplay':'block',
 						'noneCourseDisplay':'none'
 					});
