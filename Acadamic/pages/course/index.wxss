@@ -1,1 +1,27 @@
-/* pages/course/index.wxss */
+.chapter-info-list{
+    padding: 20rpx;
+}
+.chapter-info-item{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dashed #ccc;	
+}
+.chapter-info-item .chapter-info-item-lf{
+    width: 70%;
+    text-align: left;
+    font-size: 28rpx;
+}
+.chapter-info-item .chapter-info-item-lf>view:first-child{
+    font-weight: bold;
+    font-size: 36rpx;
+    padding: 8rpx 0;
+}
+.chapter-info-item .chapter-info-item-rt{
+    width: 30%;
+    display: flex;
+    align-items:center;
+}
+.chapter-info-item .chapter-info-item-rt button{
+    background-color: #4183c4;
+    color: #fff;
+}

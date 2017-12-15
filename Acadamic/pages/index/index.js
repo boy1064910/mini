@@ -12,12 +12,6 @@ Page({
 	courseList:[]//课程列表
 	
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad: function () {
     //获取用户信息
     app.request({
@@ -31,10 +25,7 @@ Page({
 			app.request({
 				'url': common.acadamicService + "/course/list.shtml",
 				"success":res=>{
-					console.log(this);
-					console.log(res);
 					var data = res.data;
-					console.log(data);
 					this.setData({
 						'unBuyCourseList': data.unBuyCourseList,
 						'buyedCourseList': data.buyedCourseList,

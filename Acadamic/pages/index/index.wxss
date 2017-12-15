@@ -40,10 +40,36 @@
 }
 .course-info-list>view{
 	display: none;
-	font-size: 30rpx;
 }
 .course-info-list .none-course-tips{
 	color: #ccc;
+    font-size: 28rpx;
+}
+.course-info-list .course-info-item{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dashed #ccc;	
+}
+.course-info-list .course-info-item .course-info-item-lf{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: left;
+    font-size: 28rpx;
+}
+.course-info-list .course-info-item .course-info-item-lf>view:first-child{
+    font-weight: bold;
+    font-size: 36rpx;
+    padding: 8rpx 0;
+}
+.course-info-list .course-info-item .course-info-item-rt{
+    width: 30%;
+    display: flex;
+    align-items:center;
+}
+.course-info-list .course-info-item .course-info-item-rt button{
+    background-color: #4183c4;
+    color: #fff;
 }
 
 .btn-info{

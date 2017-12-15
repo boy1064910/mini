@@ -20,8 +20,14 @@
 		<view class="course-info-list">
 			<!-- 平台课程列表 -->
 			<view style="display:{{courseDisplay}}">
-				<view wx:key="id" wx:for="{{unBuyCourseList}}" wx:for-index="idx" wx:for-item="course" bindtap="toCourse" id="{{course.id}}">
-					{{idx}}: {{course.name}}
+				<view class="course-info-item" wx:key="id" wx:for="{{unBuyCourseList}}" wx:for-index="idx" wx:for-item="course" bindtap="toCourse" id="{{course.id}}">
+                    <view class='course-info-item-lf'>
+                        <view>{{course.name}}</view>
+                        <view>{{course.buyCount}}--{{course.originPrice}}</view>
+                    </view>
+                    <view class='course-info-item-rt'>
+                        <button size='mini'>购买</button>
+                    </view>
 				</view>
 			</view>
 			<!-- 平台无课程提示文案 -->

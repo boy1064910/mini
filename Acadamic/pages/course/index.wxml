@@ -1,2 +1,11 @@
-<!--pages/course/index.wxml-->
-<text>pages/course/index.wxml</text>
+<view class="chapter-info-list">
+    <view class="chapter-info-item" wx:key="id" wx:for="{{chapterList}}" wx:for-index="idx" wx:for-item="model" id="{{model.chapter.id}}">
+        <view class='chapter-info-item-lf'>
+            <view>{{model.chapter.name}}</view>
+            <view>{{model.chapter.buyCount}}--{{model.chapter.originPrice}}</view>
+        </view>
+        <view class='chapter-info-item-rt'>
+            <button size='mini'>购买单章</button>
+        </view>
+    </view>
+</view>

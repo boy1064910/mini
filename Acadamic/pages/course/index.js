@@ -1,18 +1,30 @@
-// pages/course/index.js
+var common = require('../../config/common.js');
+const app = getApp()
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    'course':null,
+    'chapterList':null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+      app.request({
+          'url': common.acadamicService + "/course/chapter/list.shtml",
+          'params':{
+            'courseId':options.id
+          },
+          "success": res => {
+              var data = res.data;
+              this.setData({
+                  'course': data.course,
+                  'chapterList': data.chapterList
+              });
+          }
+      })
   },
 
   /**
