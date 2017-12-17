@@ -74,5 +74,34 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  payChapter: function(e){
+	  console.log(e.currentTarget.id);
+	  app.request({
+		  'url': common.acadamicService + '/order/orderChapter.shtml',
+		  'method': 'post',
+		  'params':{
+			  'chapterId':e.currentTarget.id
+		  },
+		  'success':function(result){
+			  console.log(result.data);
+			  var data = result.data;
+			  
+			  wx.requestPayment({
+				  'timeStamp': data.timeStamp,
+				  'nonceStr': data.nonceStr,
+				  'package': data.packageInfo,
+				  'signType': data.signType,
+				  'paySign': data.paySign,
+				  'success': function (res) {
+					  wx.navigateTo({
+						  url: '../index/index'
+					  });
+				  },
+				  'fail': function (res) {
+				  }
+			  })
+		  }
+	  })
   }
 })

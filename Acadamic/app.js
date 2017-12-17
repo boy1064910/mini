@@ -30,7 +30,8 @@ App({
                               'iv': iv
                             },
 							'header':{
-								'content-type':'application/x-www-form-urlencoded'
+								'content-type':'application/x-www-form-urlencoded',
+								'X-REQUESTED-CLIENT': 'WxMiniProgram',//当前客户端为微信小程序
 							},
 							'dataType':'json',
                             'success':function(res){
@@ -76,6 +77,7 @@ App({
 				'content-type': 'application/x-www-form-urlencoded',
 				'X-Requested-With': 'XMLHttpRequest',
 				'xfsw-session': sessionId,
+				'X-REQUESTED-CLIENT': 'WxMiniProgram',//当前客户端为微信小程序
 				'content-type': 'application/x-www-form-urlencoded'
 			};
 			var _this = this;

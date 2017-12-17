@@ -5,7 +5,7 @@
             <view>{{model.chapter.buyCount}}--{{model.chapter.originPrice}}</view>
         </view>
         <view class='chapter-info-item-rt'>
-            <button size='mini'>购买单章</button>
+            <button size='mini' catchtap='payChapter' id="{{model.chapter.id}}">购买单章</button>
         </view>
     </view>
 </view>
