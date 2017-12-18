@@ -90,15 +90,17 @@ Page({
 			  wx.requestPayment({
 				  'timeStamp': data.timeStamp,
 				  'nonceStr': data.nonceStr,
-				  'package': data.packageInfo,
+				  'package': data.package,
 				  'signType': data.signType,
 				  'paySign': data.paySign,
 				  'success': function (res) {
+					  console.log(res);
 					  wx.navigateTo({
 						  url: '../index/index'
 					  });
 				  },
 				  'fail': function (res) {
+					  console.log(res);
 				  }
 			  })
 		  }
