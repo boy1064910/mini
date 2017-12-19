@@ -24,7 +24,12 @@ function isNull(obj) {
 }
 //检查对象和内容不为空
 function isEmpty(obj) {
-    return isUndefined(obj) || isNull(obj) || (typeof (obj) == "string" && obj.trim() == "");
+	if(obj instanceof Array){
+		return obj.length==0;
+	}
+	else{
+		return isUndefined(obj) || isNull(obj) || (typeof (obj) == "string" && obj.trim() == "");	
+	}
 }
 
 function formatDate(date, fmt) {

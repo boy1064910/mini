@@ -9,7 +9,15 @@
 		<view class="course-info-list">
 			<!-- 已购买的课程列表 -->
 			<view style="display:{{courseBuyDisplay}}">
-			
+				<view class="course-info-item" wx:key="id" wx:for="{{buyedCourseList}}" wx:for-index="idx" wx:for-item="course" bindtap="toCourse" id="{{course.id}}">
+                    <view class='course-info-item-lf'>
+                        <view>{{course.name}}</view>
+                        <view>{{course.buyCount}}--{{course.originPrice}}</view>
+                    </view>
+                    <view class='course-info-item-rt'>
+                        <button size='mini'>购买</button>
+                    </view>
+				</view>
 			</view>
 			<!-- 未购买课程提示文案 -->
 			<view class="none-course-tips" style="display:{{noneCourseBuyDisplay}}">
@@ -32,7 +40,7 @@
 			</view>
 			<!-- 平台无课程提示文案 -->
 			<view class="none-course-tips" style="display:{{noneCourseDisplay}}">
-				<text>平台尚未发布新课程...</text>
+				<text>小编正在努力制作课程，敬请期待...</text>
 			</view>
 		</view>
     </view>

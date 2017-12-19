@@ -1,4 +1,5 @@
 var common = require('../../config/common.js');
+var util = require('../../utils/util.js');
 const app = getApp()
 
 Page({
@@ -9,8 +10,8 @@ Page({
 	courseBuyDisplay:'none',//已购买的课程显示开关
 	noneCourseDisplay: 'block',//平台无课程提示文案显示开关
 	courseDisplay:'none',//平台课程列表显示开关
-	courseList:[]//课程列表
-	
+	unBuyCourseList:[],//课程列表
+	buyedCourseList:[]
   },
   onLoad: function () {
     //获取用户信息
@@ -26,11 +27,26 @@ Page({
 				'url': common.acadamicService + "/course/list.shtml",
 				"success":res=>{
 					var data = res.data;
+					var noneCourseBuyDisplay = "block";
+					var courseBuyDisplay = "none";
+					if (!util.isEmpty(data.buyedCourseList)){
+						noneCourseBuyDisplay = "none";
+						courseBuyDisplay = "block";
+					}
+
+					var noneCourseDisplay = "block";
+					var courseDisplay = "none";
+					if (!util.isEmpty(data.unBuyCourseList)) {
+						noneCourseDisplay = "none";
+						courseDisplay = "block";
+					}
 					this.setData({
 						'unBuyCourseList': data.unBuyCourseList,
 						'buyedCourseList': data.buyedCourseList,
-						'courseDisplay':'block',
-						'noneCourseDisplay':'none'
+						'courseDisplay': courseDisplay,
+						'noneCourseDisplay': noneCourseDisplay,
+						'noneCourseBuyDisplay': noneCourseBuyDisplay,
+						'courseBuyDisplay': courseBuyDisplay
 					});
 				}
 			})
