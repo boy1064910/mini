@@ -12,10 +12,13 @@
 				<view class="course-info-item" wx:key="id" wx:for="{{buyedCourseList}}" wx:for-index="idx" wx:for-item="course" bindtap="toCourse" id="{{course.id}}">
                     <view class='course-info-item-lf'>
                         <view>{{course.name}}</view>
-                        <view>{{course.buyCount}}--{{course.originPrice}}</view>
+                        <view>
+							<view>进行章节:{{course.chapterName}}</view>
+							<view>学习进度:{{course.percent*100}}%</view>
+						</view>
                     </view>
                     <view class='course-info-item-rt'>
-                        <button size='mini'>购买</button>
+						<button size='mini'>学习</button>
                     </view>
 				</view>
 			</view>
@@ -31,7 +34,7 @@
 				<view class="course-info-item" wx:key="id" wx:for="{{unBuyCourseList}}" wx:for-index="idx" wx:for-item="course" bindtap="toCourse" id="{{course.id}}">
                     <view class='course-info-item-lf'>
                         <view>{{course.name}}</view>
-                        <view>{{course.buyCount}}--{{course.originPrice}}
+                        <view>
                             <view>章节数量:{{course.chapterCount}}</view>
                             <view>学习人数:{{course.buyCount}}</view>
                             <view>价格:￥{{course.price}}</view>
