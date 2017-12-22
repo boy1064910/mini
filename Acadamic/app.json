@@ -2,7 +2,8 @@
     "pages": [
         "pages/index/index",
         "pages/logs/logs",
-        "pages/course/index"
+        "pages/course/index",
+        "pages/chapter/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
