@@ -3,7 +3,8 @@ var util = require('../../utils/util.js');
 const app = getApp()
 Page({
   data: {
-	  knowledgeList:[]//知识点列表
+	  knowledgeList:[],//知识点列表
+    progressChapter:{}
   },
   onLoad: function (options) {
 	  app.request({
@@ -16,7 +17,8 @@ Page({
 			  var knowledgeList = data.knowledgeList;
 			  var progressChapter = data.progressChapter;
 			  this.setData({
-				  'knowledgeList': knowledgeList
+				  'knowledgeList': knowledgeList,
+          'progressChapter': progressChapter
 			  });
 		  }
 	  })
