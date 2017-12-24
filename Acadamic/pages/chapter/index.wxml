@@ -1,2 +1,10 @@
-<!--pages/chapter/index.wxml-->
-<text>pages/chapter/index.wxml</text>
+<view class="knowledge-info-list">
+    <view class="knowledge-info-item" wx:key="id" wx:for="{{knowledgeList}}" wx:for-index="idx" wx:for-item="knowledge" id="{{knowledge.id}}">
+        <view class='knowledge-info-item-lf'>
+            <view>{{knowledge.name}}</view>
+        </view>
+        <view class='knowledge-info-item-rt'>
+            <button size='mini' catchtap='payknowledge' id="{{knowledge.id}}">购买单章</button>
+        </view>
+    </view>
+</view>

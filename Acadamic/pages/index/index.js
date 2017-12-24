@@ -65,5 +65,10 @@ Page({
       wx.navigateTo({
           url: '../course/index?id=' + e.currentTarget.id
       })
+  },
+  toChapter:function(e){
+	  wx.navigateTo({
+		  url: '../chapter/index?id=' + e.currentTarget.id
+	  })
   }
 })

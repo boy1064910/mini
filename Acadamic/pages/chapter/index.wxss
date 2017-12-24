@@ -1,1 +1,27 @@
-/* pages/chapter/index.wxss */
+.knowledge-info-list{
+    padding: 20rpx;
+}
+.knowledge-info-item{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dashed #ccc;	
+}
+.knowledge-info-item .knowledge-info-item-lf{
+    width: 70%;
+    text-align: left;
+    font-size: 28rpx;
+}
+.knowledge-info-item .knowledge-info-item-lf>view:first-child{
+    font-weight: bold;
+    font-size: 36rpx;
+    padding: 8rpx 0;
+}
+.knowledge-info-item .knowledge-info-item-rt{
+    width: 30%;
+    display: flex;
+    align-items:center;
+}
+.knowledge-info-item .knowledge-info-item-rt button{
+    background-color: #4183c4;
+    color: #fff;
+}

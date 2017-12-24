@@ -18,7 +18,7 @@
 						</view>
                     </view>
                     <view class='course-info-item-rt'>
-						<button size='mini'>学习</button>
+						<button size='mini' id="{{course.chapterId}}" catchtap="toChapter">学习</button>
                     </view>
 				</view>
 			</view>
