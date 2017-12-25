@@ -1,5 +1,5 @@
 <view class="knowledge-info-list">
-  <view class="knowledge-info-item" wx:key="id" wx:for="{{knowledgeList}}" wx:for-index="idx" wx:for-item="knowledge" id="{{knowledge.id}}">
+  <view class="knowledge-info-item" wx:key="id" wx:for="{{knowledgeList}}" wx:for-index="idx" wx:for-item="knowledge" id="{{knowledge.id}}" bindtap='toKnowledge'>
     <view class='knowledge-info-item-lf'>
       <view>{{knowledge.name}}</view>
     </view>

@@ -76,7 +76,6 @@ Page({
   
   },
   payChapter: function(e){
-	  console.log(e.currentTarget.id);
 	  app.request({
 		  'url': common.acadamicService + '/order/orderChapter.shtml',
 		  'method': 'post',
@@ -84,9 +83,7 @@ Page({
 			  'chapterId':e.currentTarget.id
 		  },
 		  'success':function(result){
-			  console.log(result.data);
 			  var data = result.data;
-			  
 			  wx.requestPayment({
 				  'timeStamp': data.timeStamp,
 				  'nonceStr': data.nonceStr,
