@@ -12,7 +12,7 @@ Page({
     onLoad: function (options) {
         var knowledgeId = options.knowledgeId;
         var sessionId = wx.getStorageSync("sessionId");
-        var webUrl = 'http://mini.xueshupa.net/latex.html?sessionId=' + sessionId + '&knowledgeId=' + knowledgeId;
+        var webUrl = 'https://mini.xueshupa.net/latex.html?sessionId=' + sessionId + '&knowledgeId=' + knowledgeId;
         console.log(webUrl);
         this.setData({
             webUrl: webUrl
