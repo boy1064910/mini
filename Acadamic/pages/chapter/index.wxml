@@ -1,7 +1,9 @@
 <view class="knowledge-info-list">
-  <view class="knowledge-info-item" wx:key="id" wx:for="{{knowledgeList}}" wx:for-index="idx" wx:for-item="knowledge" id="{{knowledge.id}}" bindtap='toKnowledge'>
-    <view class='knowledge-info-item-lf'>
-      <view>{{knowledge.name}}</view>
-    </view>
+  <view class="knowledge-info-item" wx:key="id" wx:for="{{knowledgeList}}" wx:for-index="idx" wx:for-item="knowledge" id="{{knowledge.id}}">
+	<view>{{knowledge.name}}</view>
+	<view class="k-point-item" wx:key="id" wx:for="{{knowledge.knowledgePointList}}" wx:for-index="idx" wx:for-item="knowledgePoint" id="{{knowledgePoint.id}}" bindtap='toKnowledgePoint'>
+		<view>{{knowledgePoint.title}}</view>
+		<icon type="warn" size="20"/>
+	</view>
   </view>
 </view>

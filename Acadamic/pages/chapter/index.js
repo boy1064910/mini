@@ -52,9 +52,9 @@ Page({
     onShareAppMessage: function () {
 
     },
-    toKnowledge: function (e) {
+	toKnowledgePoint: function (e) {
         wx.navigateTo({
-            url: '../knowledge/index?knowledgeId=' + e.currentTarget.id
+            url: '../knowledge/index?knowledgePointId=' + e.currentTarget.id
         })
     }
 })

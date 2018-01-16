@@ -10,9 +10,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        var knowledgeId = options.knowledgeId;
+		var knowledgePointId = options.knowledgePointId;
         var sessionId = wx.getStorageSync("sessionId");
-        var webUrl = 'https://mini.xueshupa.net/latex.html?sessionId=' + sessionId + '&knowledgeId=' + knowledgeId;
+		var webUrl = 'https://mini.xueshupa.net/latex.html?sessionId=' + sessionId + '&knowledgePointId=' + knowledgePointId;
         console.log(webUrl);
         this.setData({
             webUrl: webUrl

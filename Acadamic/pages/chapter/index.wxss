@@ -3,25 +3,31 @@
 }
 .knowledge-info-item{
     display: flex;
-    flex-direction: row;
-    border-bottom: 1px dashed #ccc;	
-}
-.knowledge-info-item .knowledge-info-item-lf{
-    width: 70%;
+    flex-direction: column;
     text-align: left;
-    font-size: 28rpx;
 }
-.knowledge-info-item .knowledge-info-item-lf>view:first-child{
+.knowledge-info-item>view:first-child{
     font-weight: bold;
-    font-size: 36rpx;
     padding: 8rpx 0;
+	font-size: 32rpx;
+	margin: 0;
+	border-bottom: none;
 }
-.knowledge-info-item .knowledge-info-item-rt{
-    width: 30%;
-    display: flex;
-    align-items:center;
+.knowledge-info-item>view{
+	margin: 0 0 0 20rpx;
+	font-size: 28rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	border-bottom: 1px dashed #ccc;	
 }
-.knowledge-info-item .knowledge-info-item-rt button{
-    background-color: #4183c4;
-    color: #fff;
+
+.k-point-item{
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+}
+
+.k-point-item icon{
+	display: flex;
+	align-items: center;
 }
