@@ -1,5 +1,5 @@
 .knowledge-info-list{
-    padding: 20rpx;
+    padding: 0 20rpx 20rpx 20rpx;
 }
 .knowledge-info-item{
     display: flex;
@@ -30,4 +30,10 @@
 .k-point-item icon{
 	display: flex;
 	align-items: center;
+}
+
+.buyed-tip{
+	text-align:center;color:#576b95;
+	font-size: 13pt;
+	padding-top: 10rpx;
 }

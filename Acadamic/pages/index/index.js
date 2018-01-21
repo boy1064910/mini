@@ -14,13 +14,13 @@ Page({
 		buyedCourseList: []
 	},
 	onLoad: function () {
-
+		this.loadData();
 	},
 	onReady: function () {
 		
 	},
 	onShow: function(){
-		this.loadData();
+		
 	},
 	getUserInfo: function (e) {
 		app.globalData.userInfo = e.detail.userInfo

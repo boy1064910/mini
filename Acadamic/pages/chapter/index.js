@@ -4,7 +4,8 @@ const app = getApp()
 Page({
     data: {
         knowledgeList: [],//知识点列表
-		progressCourse: {}
+		progressCourse: {},
+		isBuyed: true
     },
     onLoad: function (options) {
         app.request({
@@ -16,9 +17,11 @@ Page({
                 var data = res.data;
                 var knowledgeList = data.knowledgeList;
 				var progressCourse = data.progressCourse;
+				var isBuyed = data.isBuyed;
                 this.setData({
                     'knowledgeList': knowledgeList,
-					'progressCourse': progressCourse
+					'progressCourse': progressCourse,
+					'isBuyed': isBuyed
                 });
             }
         })
@@ -53,8 +56,10 @@ Page({
 
     },
 	toKnowledgePoint: function (e) {
-        wx.navigateTo({
-            url: '../knowledge/index?knowledgePointId=' + e.currentTarget.id
-        })
+		if(this.data.isBuyed){
+			wx.navigateTo({
+				url: '../knowledge/index?knowledgePointId=' + e.currentTarget.id
+			})
+		}
     }
 })

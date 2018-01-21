@@ -1,5 +1,5 @@
 <view class="chapter-info-list">
-    <view class="chapter-info-item" wx:key="id" wx:for="{{chapterList}}" wx:for-index="idx" wx:for-item="model" id="{{model.chapter.id}}">
+    <view class="chapter-info-item" wx:key="id" wx:for="{{chapterList}}" wx:for-index="idx" wx:for-item="model" id="{{model.chapter.id}}" catchtap="toKnowledge">
         <view class='chapter-info-item-lf'>
             <view>{{model.chapter.name}}</view>
         </view>

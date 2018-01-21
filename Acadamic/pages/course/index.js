@@ -155,5 +155,11 @@ Page({
 				});
 			}
 		})
+	},
+	toKnowledge:function(e){
+		var chapterId = e.currentTarget.id;
+		wx.navigateTo({
+			url: '../chapter/index?id=' + chapterId
+		})
 	}
 })

@@ -1,3 +1,6 @@
+<view wx:if="{{!isBuyed}}" class="buyed-tip">
+	您尚未购买章节，请返回购买
+</view>
 <view class="knowledge-info-list">
   <view class="knowledge-info-item" wx:key="id" wx:for="{{knowledgeList}}" wx:for-index="idx" wx:for-item="knowledge" id="{{knowledge.id}}">
 	<view>{{knowledge.name}}</view>
