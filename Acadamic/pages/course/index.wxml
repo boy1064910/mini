@@ -2,10 +2,13 @@
     <view class="chapter-info-item" wx:key="id" wx:for="{{chapterList}}" wx:for-index="idx" wx:for-item="model" id="{{model.chapter.id}}">
         <view class='chapter-info-item-lf'>
             <view>{{model.chapter.name}}</view>
-            <view>{{model.chapter.buyCount}}--{{model.chapter.originPrice}}</view>
         </view>
-        <view class='chapter-info-item-rt'>
-            <button size='mini' catchtap='payChapter' id="{{model.chapter.id}}">购买单章</button>
+        <view class='chapter-info-item-rt' wx:if="{{!model.buyed}}">
+            <button size='mini' catchtap='payChapter' id="{{model.chapter.id}}">￥{{model.chapter.price}}</button>
         </view>
     </view>
+</view>
+
+<view class="buy-all-item">
+	<button type="primary" catchtap='payChapterList'>{{courseBuyBtnTxt}}</button>
 </view>

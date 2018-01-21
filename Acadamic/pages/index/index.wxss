@@ -26,7 +26,7 @@
 	margin-top: 30rpx;
 }
 .course-info>view{
-	padding: 20rpx 0rpx 8rpx 0rpx;
+	padding: 8rpx 0rpx;
 	margin: 0 20rpx;
 }
 .course-buyed-title{
@@ -60,12 +60,18 @@
 .course-info-list .course-info-item .course-info-item-lf>view:first-child{
     font-weight: bold;
     font-size: 36rpx;
-    padding: 8rpx 0;
+    padding: 4rpx 0;
+}
+.course-info-item-progress{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 .course-info-list .course-info-item .course-info-item-rt{
-    width: 30%;
+    width: 20%;
     display: flex;
-    align-items:center;
+    align-items:flex-end;
+	padding-bottom: 8rpx;
 }
 .course-info-list .course-info-item .course-info-item-rt button{
     background-color: #4183c4;

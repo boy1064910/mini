@@ -4,7 +4,7 @@ const app = getApp()
 Page({
     data: {
         knowledgeList: [],//知识点列表
-        progressChapter: {}
+		progressCourse: {}
     },
     onLoad: function (options) {
         app.request({
@@ -15,10 +15,10 @@ Page({
             "success": res => {
                 var data = res.data;
                 var knowledgeList = data.knowledgeList;
-                var progressChapter = data.progressChapter;
+				var progressCourse = data.progressCourse;
                 this.setData({
                     'knowledgeList': knowledgeList,
-                    'progressChapter': progressChapter
+					'progressCourse': progressCourse
                 });
             }
         })

@@ -7,7 +7,7 @@
     border-bottom: 1px dashed #ccc;	
 }
 .chapter-info-item .chapter-info-item-lf{
-    width: 70%;
+    width: 80%;
     text-align: left;
     font-size: 28rpx;
 }
@@ -17,11 +17,17 @@
     padding: 8rpx 0;
 }
 .chapter-info-item .chapter-info-item-rt{
-    width: 30%;
+    width: 20%;
     display: flex;
     align-items:center;
 }
 .chapter-info-item .chapter-info-item-rt button{
     background-color: #4183c4;
     color: #fff;
+}
+
+.buy-all-item{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
